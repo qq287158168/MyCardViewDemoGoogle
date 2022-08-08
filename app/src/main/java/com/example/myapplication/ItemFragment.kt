@@ -22,7 +22,12 @@ class ItemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-        binding = DataBindingUtil.inflate(inflater, R.layout.home_feed_item_base_audio_layout, container, false);
+        binding = DataBindingUtil.inflate(
+            inflater,
+            R.layout.home_feed_item_base_audio_layout,
+            container,
+            false
+        );
         return binding.root
     }
 
@@ -30,17 +35,16 @@ class ItemFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         MyIndex.add()
-       val xxx= when (MyIndex.index) {
-            1->R.drawable.aa0
-            2->R.drawable.aa1
-            3->R.drawable.aa2
-            4->R.drawable.aa3
-            5->R.drawable.aa4
-            6->R.drawable.aa5
-            else->R.drawable.aa4
+        val xxx = when (MyIndex.index % 6) {
+            1 -> R.drawable.aa1
+            2 -> R.drawable.aa2
+            3 -> R.drawable.aa3
+            4 -> R.drawable.aa4
+            5 -> R.drawable.aa5
+            else -> R.drawable.aa0
         }
 
-        binding. homeFeedItemBg.setImageResource(xxx)
+        binding.homeFeedItemBg.setImageResource(xxx)
 
     }
 

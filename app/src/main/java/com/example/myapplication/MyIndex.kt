@@ -2,7 +2,7 @@ package com.example.myapplication
 
 object MyIndex {
 
-    var index = 0
+    var index = -1
     fun add() {
         ++index
     }

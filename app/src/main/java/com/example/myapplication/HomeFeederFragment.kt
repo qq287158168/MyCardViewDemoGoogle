@@ -25,7 +25,7 @@ class HomeFeederFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-
+        binding.vp.offscreenPageLimit = 6
         binding.vp.adapter = FeederAdapter(this, lifecycle)
     }
 
